@@ -104,3 +104,19 @@ can be used to get information etc.
 
 tutorial part 6 for video series above
 
+this part 6 convers create blog posts in the _posts folder
+the naming convention comes int he form:
+2019-02-21-welcome-to-jekyll.markdown
+can also just use .html instead of markdown - either works
+the most important part is including the date at the front then the title for the rest of the title
+and apparently both .md and .markdown work for extensions
+I find out by experimenting that setting the file to a future date doesn't auto-show up. 
+Although perhaps it would eventually show up on the main page as an entry
+
+the first step for any new post file should be adding the "front matter" inside those three dashes ---
+above/below it
+I gather this is a lot like meta data only it matters quite a lot to tell jekyll how to display the content
+layout: post
+is for posts - custom layouts can be created/used though
+
+
