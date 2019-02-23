@@ -90,4 +90,17 @@ contains information about pages
 like title or date written
 information about each of pages
 
+for instance:
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2019-02-21 20:45:05 -0800
+categories: jekyll update
+---
+in the .markdown file
+can be used to get information etc.
+
+------------------------------------------------------
+
+tutorial part 6 for video series above
 
