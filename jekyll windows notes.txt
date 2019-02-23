@@ -118,5 +118,20 @@ above/below it
 I gather this is a lot like meta data only it matters quite a lot to tell jekyll how to display the content
 layout: post
 is for posts - custom layouts can be created/used though
+The 
+title:
+front matter over rides the title of the entry. By default it would use the info from the file's name
+for instance the file
+2019-02-22-first-example-blogpost.md
+would show up with the title "First Example Blogpost"
+without that title: entry
+while 
+title:  "Welcome to my newest blog"
+would change the title to "Welcome to my newest blog"
+These are "front matter variables"
 
+subfolders can be created under the _posts folder
 
+------------------------------------------------------
+
+tutorial part 7
