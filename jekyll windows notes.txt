@@ -138,3 +138,16 @@ subfolders can be created under the _posts folder
 ------------------------------------------------------
 
 tutorial part 7
+
+all about "drafts"
+
+create a "_drafts" folder - same level as the _posts folder
+
+any md file in that _drafts folder will be a work in progress
+won't show up directly in "posts" section of page
+to see these pages use the alt jekyl server command:
+
+jekyll server --draft
+
+
+
