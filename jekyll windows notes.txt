@@ -32,7 +32,8 @@ gem -v does same for gem installed/version printout
 
 next:
 gem install jekyll bundler 
-[I changed to my local drive repo to run this command, not sure if that was necessary: no additional files in that folder so not necessary]
+[I changed to my local drive repo to run this command, not sure if that was necessary: 
+no additional files in that folder so not necessary]
 
 should say "2 gems installed" -- actually it came 26 gems installed. maybe i just misheard that.
 
@@ -51,8 +52,10 @@ jekyll new my-new-blog
 creates a bunch default files or "scaffolding"
 for this part:
 ended up creating repo on github first called "jekyll-windows-test"
-then cloning that to local drive in my repo folder - this is an empty folder with just .git subfolder and a readme.md file
-then at CMD shell one level up/in repo folder ran the command with "--force" to make it create the scaffholding in this existing repo folder
+then cloning that to local drive in my repo folder - this is an empty folder with just .git subfolder 
+and a readme.md file
+then at CMD shell one level up/in repo folder ran the command with "--force" to make it create the 
+scaffholding in this existing repo folder
 "jekyll new jekyll-windows-test --force"
 the --force is to make it work into a non-empty folder
 and it did work as far as i can tell
