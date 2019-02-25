@@ -256,3 +256,38 @@ to insert a page title
 hypothetical downside to doing it this way is that non-post pages like about.md
 will go back to not having a layout defintion but instead posts layout instead of 
 page layout
+
+------------------------------------------------------
+
+tutorial part 11
+
+all about themes
+
+default theme is minima
+
+controlled in _config.yml
+also the "gemfile" file
+
+ruby gems is good place to start for themes
+
+search "jekyll-theme"
+in the sample theme called "jekyll-theme-hacker"
+https://github.com/pages-themes/hacker
+no various layouts are defined, only a "default.html"
+actually since this video apparently there's a "post.html"
+in any case had to modify that layout: line to say "default"
+instead of page or post etc
+
+I verified this hacker theme was installed with command:
+bundle info jekyll-theme-hacker
+
+if you don't go in and change that layout: line in the front matter 
+the page will come up blank when refreshed
+
+in gem file added line:
+  gem "jekyll-theme-hacker"
+
+and in the _config.yml file
+commented out current theme line and put in line:
+theme: jekyll-theme-hacker
+
