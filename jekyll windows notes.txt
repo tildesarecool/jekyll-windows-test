@@ -185,3 +185,74 @@ site page
 
 tutorial part 9
 
+all about "permalinks"
+
+notes that the 
+_site
+folder stores finished complete site
+it's a folder structure based on page file names and front matter
+in the sample URL
+http://127.0.0.1:4000/jekyll/update/2019/02/21/welcome-to-jekyll.html
+the "update" is the category defined in the front matter
+and the HTML file is defined by the title
+and the data stamp is also defined
+so a permalink definition would give it a more static location that wouldn't be
+broken if the category or another detail were changed later
+
+can define a permalink in the front matter with something such as
+permalink: "/my-new-url/"
+this will override the generated URL as mentioned
+
+can also use
+permalink: /:categories
+to use a different variable
+
+or /categories:/:year/:month:/:day/:title
+and can also switch these variable around
+as well as using a custom extension like title.html for instance
+
+------------------------------------------------------
+
+tutorial part 10
+
+"front matter defaults"
+
+defined in config.yaml file
+
+a new post file won't have any formatting etc. without the 
+front matter between the --- lines
+in order define some constants that will be consistent, can use 
+the defaults in the
+_config.yml
+file
+
+start with the 
+defaults:
+i changed my _config.yml file to reflect changes below,
+must stop/start jekyll server 
+defaults:
+  -
+    scope:
+      path: ""
+      values:
+        layout: "post"
+
+The above was making the jekyll server complain of 
+invalid values, but below for whatever reason did work:
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      # type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      #type: posts # theoretically can use this value down here for non-posts like about
+
+above works even better since it uses that post name portion of the file name 
+to insert a page title
+
+-------
+hypothetical downside to doing it this way is that non-post pages like about.md
+will go back to not having a layout defintion but instead posts layout instead of 
+page layout
