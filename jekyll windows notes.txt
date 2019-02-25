@@ -147,7 +147,41 @@ any md file in that _drafts folder will be a work in progress
 won't show up directly in "posts" section of page
 to see these pages use the alt jekyl server command:
 
-jekyll server --draft
+jekyll serve --draft
 
+note: both "serve" and "server" actually should work
 
+Even though I got this working on the win 7 toughbook correctly, i can't seem to get it working on 
+win 10/alienware with the normal "jekyll server"
+It does seem towrk with the entire 
+
+bundle exec jekyll server --draft
+as well as 
+bundle exec jekyll server 
+
+And this does work: write a draft in the _drafts with normal front matter with layout: post
+running the above with --draft will show the draft as an option 
+and will be hidden without that --draft option
+naming drafts does not have to be in the year-months-day format file name
+but would have have to be named that way when moved the _posts folder
+
+------------------------------------------------------
+
+tutorial part 8
+
+"posts" versus "pages"
+
+such as about page
+
+create new file on "root" of site e.g. not in _posts folder or anything
+and add some frontmatter with the standard
+front/end ---
+can use layout: "page" instead of post
+and have to specify title since it's not necesarily pre-defined
+and that title actually did show up to the right of "about" in the main 
+site page
+
+------------------------------------------------------
+
+tutorial part 9
 
