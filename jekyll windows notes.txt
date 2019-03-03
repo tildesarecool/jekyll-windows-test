@@ -303,3 +303,103 @@ and in the _config.yml file
 commented out current theme line and put in line:
 theme: jekyll-theme-hacker
 
+------------------------------------------------------
+
+
+tutorial part 12: all about layouts
+
+The theme defines the layouts for different pages
+
+variable laytout will use "post"
+and on abot page uses "page"
+defines laytout for posts/pages on layout
+
+to create own layout
+create new folder like _layout
+create new file in that folder
+like posts.html
+generally layouts should be defined in html
+
+so if that post.html file contained only
+<h1>This is a post</h1>
+and i clicked a post link it would just up with those words
+and indeed that is all it says
+
+below that can use 
+{{ content }}
+
+this is placeholder for current blog posts, a special variable
+
+can also override page layout:
+create page.html in same _layouts folder
+called page.html
+and use the same sort of method
+
+with {{ content }}
+
+I made page.html with this:
+<h1>This is a page</h1>
+
+<hr>
+
+{{ content }}
+
+when clicking "about" link it has my H1 line, an hr and 
+"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com"
+along with some other basic info
+so this is obviously where that is
+
+next section of video is "custome layouts"
+
+I'll just make a random file name with some similar content to above:
+under "_layouts"
+created "morecontent.html"
+and pasted in:
+
+<h1>This is more content</h1>
+
+<hr>
+
+{{ content }}
+
+
+If I then go over to a blog post and change the layout: line
+
+
+from post to "morecontent"
+------------------------------------
+
+can have different levels of layouts
+started with "wrapper"
+wrapper.html
+
+
+created some scaffolding/skeleton html:
+------------------------
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    Wrapper <br>
+    {{ content }}
+    <br> Wrapper
+    
+</body>
+</html>
+----------------------------
+
+then back in the post.html file
+
+change the layout line to "post" again
+essentially embedding one layout around another
+which is the definition of wrapper so ya, good term
+
+back in page.html
+change front matter layout line to wrapper as well
+will just use the skeleton
+along side the sub layouts
+
+other things can be done with the {{}} braces like using other variables
+and "looping through data"
