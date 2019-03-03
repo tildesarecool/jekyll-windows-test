@@ -458,6 +458,38 @@ for further exploration of different varieties of accessible variables
 
 ------------------------------------------------------
 
-tutorial part 14:
+tutorial part 14: Includes
 
+
+I created a _includes folder
+then a "header.html" file in the folder
+
+then used this:
+<h1> {{ site.title }} </h1>
+<hr>
+
+which is supposed to get the title from the _config.yml file
+
+then in the wrapper.html file
+in the body tag but above the {{ content }} tag
+put in:
+{% include header.html %}
+which doesn't syntax highlight
+and also don't put space between the { and the %
+that part is important
+and indeed all the pages have the "your awesome title"
+
+can also pass information the the includes
+
+for instance the line in wrapper HTML to this
+    {% include header.html color="blue"  %}
+
+then that information can be accessed in the header html
+by modifying the h1 tag:
+<h1 style="color: {{  include.color }}">
+
+for whatever reason this doesn't seem to work on the title page
+or maybe it's not supposed to work on the title page
+it does color the titles on the post pages though
+it makes sense this only affects the pages with the post layout specified actually
 

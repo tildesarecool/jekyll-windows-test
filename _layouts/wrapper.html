@@ -1,13 +1,16 @@
 <html>
-
+<!-- highest level layout for site -->
 <head>
     <meta charset="UTF-8">
     <title> {{ site.title }} </title>
 </head>
 <body>
-    Wrapper <br>
+    <!-- Wrapper <br> -->
+    {% include header.html color="blue" %}
     {{ content }}
-    <br> Wrapper
+    <!--
+        <br> Wrapper>
+    -->
 
 </body>
 </html>
