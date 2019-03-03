@@ -493,3 +493,7 @@ or maybe it's not supposed to work on the title page
 it does color the titles on the post pages though
 it makes sense this only affects the pages with the post layout specified actually
 
+------------------------------------------------------
+
+tutorial part 15: Looping through pages
+
