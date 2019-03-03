@@ -103,6 +103,18 @@ categories: jekyll update
 in the .markdown file
 can be used to get information etc.
 
+Note from long after this video was viewed:
+I tried to switch the "hacker" theme but it would't show the posts
+so i switched back to the default "minima" theme and it showed everything
+except the posts
+I went throught the git history with github and by changing one file a time back
+to the "inital commit" found that 
+index.md
+has to have the
+layout: home
+line, at lest for minima. that was only thing making the posts not show
+on the home page of the minima themed version
+
 ------------------------------------------------------
 
 tutorial part 6 for video series above
