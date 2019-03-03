@@ -403,3 +403,61 @@ along side the sub layouts
 
 other things can be done with the {{}} braces like using other variables
 and "looping through data"
+
+------------------------------------------------------
+
+tutorial part 13: variables in jekyll
+
+
+data that be accessed in jekyll pages
+
+in the post layout can access different information and pages
+
+example is the content in post
+
+in front matter can define different variables
+like author
+author: tildes
+
+can use {{layout.(name of variable)}}
+
+like {{layout.author}}
+would only work for content in layout
+
+would also work for other data
+for instance to access the "title" of front matter
+in post.html
+can change the h1 line to refer to a varialbe instead of a actual string for a title:
+{{  page.title }}
+Indeed, instead of saying "this is a post" it changed to "welcome to jekyll"
+also it had what i had set the author line to in the front matter ("Tildes")
+
+in the actual post file like 2019-02-21-welcome-to-jekyll.markdown
+the title can be changed in the front matter
+
+If I were to change the layout.author variable in post.html
+to page.author
+it would get that value from the front matter of the 
+2019-02-21-welcome-to-jekyll.markdown
+file rather than the layout file which in this case is post.html
+
+can also access varialbes about site
+post layout uses wrapper layout
+in the title tag of wrapper.html file
+i can use the braces variable, as in:
+{{ site.title }}
+
+putting this into the wrapper.html will make it refer to the value
+over in the _config.yml file
+
+these are "site level varialbes"
+
+he refers to
+https://jekyllrb.com/docs/variables/
+for further exploration of different varieties of accessible variables
+
+------------------------------------------------------
+
+tutorial part 14:
+
+
