@@ -4,7 +4,7 @@ layout: post
 #title:  "Welcome to Jekyll!"
 title:  "New Title"
 date:   2019-02-21 20:45:05 -0800
-categories: jekyll update
+#categories: jekyll update
 #permalink: "/my-new-url/"
 author: "Keith"
 ---

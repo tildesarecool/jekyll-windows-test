@@ -532,3 +532,47 @@ pages. or the ones that have a dot-title anyway.
 
 tutorial part 16: Conditionals
 
+starting on the post.html file in the _layouts folder
+start with 
+{% if [condition here] %}
+
+{% if page.title == "Welcome to my newest blog" %}
+  This is the first post
+{% endif %}
+
+i used this in the posts.htnl:
+{% if page.title == "Welcome to my newest blog" %}
+  This is the first post
+{% endif %}
+and indeed it showed that text
+
+can also use elseif:
+{% elsif page.title == "New Title" %}
+  This is the jekyll welcome page.
+{% endif %}
+
+note: it's "elsif". note the lack of the ending 'e'. elsif.
+
+final option ise just {% else %}
+
+in addition can also use bolean logic with and/or conditionals
+just using the word "and" and "or"
+
+combine this with for-loop to create basic navigation list:
+
+{% for post in site.posts %}
+    <li><a href="{{ post.url}}">{{ page.title }}</a></li>
+{% endfor %}
+
+can also use an inline style with this. This example shows the page
+currently on as red text
+
+
+{% for post in site.posts %}
+    <li><a style="{% if page.url == post.url %}color:red;{% endif %}" href="{{ post.url}}">{{ page.title }}</a></li>
+{% endfor %}
+
+------------------------------------------------------
+
+tutorial part 17: data files
+

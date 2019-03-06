@@ -4,6 +4,21 @@ author: "Tildes"
 ---
 
 
+{% for post in site.posts %}
+    <li><a style="{% if page.url == post.url %}color:red;{% endif %}" href="{{ post.url}}">{{ page.title }}</a></li>
+{% endfor %}
+
+
+<!--
+{% if page.title == "Welcome to my newest blog" %}
+  This is the first post
+{% elsif page.title == "New Title" %}
+  This is the jekyll welcome page.
+{% else %}
+    This is some other post.
+{% endif %}
+
+-->
 
 <h2>{{ page.title }}</h2>
 <h3>{{ page.author }} </h3>
