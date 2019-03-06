@@ -615,3 +615,68 @@ Rob, Programmer
 
 tutorial part 18: static files
 
+a "static file" is any file stored on site that is not going to have
+front matter
+
+examples are PNGs, JPGs and PDFs
+
+To loop through at all the static files, you could do something like
+use a for-loop to get through all the pages in home.html for instance:
+
+{% for file in site.static_files %}
+{% endfor %}
+------
+static_files doesn't care where in directory structure this static files 
+are located.
+
+can also access the "full name" of the file with file.name 
+or basename for file.basename
+file.extname
+to show the files
+
+can actually give these static files frontmatter
+
+for instance storing images in an IMG folder
+
+you can do this by going in to config.yml file
+create a new line using:
+defaults:
+   - scope:
+      path: "assets/img" (for instance)
+    values:
+       image: true
+      
+I actually just changed my whole defaults section of 
+_config.yml
+to this:
+------
+defaults:
+  -
+    scope:
+      path: "assets/img" #(for instance)
+      #path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      image: true
+
+------
+
+
+with the modified defaults in the _config.yml file, can then 
+modify the code in the home.html file with  this information combined
+with a img tag:
+{% for file in site.static_files %}
+  {% if file.image %}
+    <img src="{{file.path}}" alt="{file.name}">
+  {% endif %}
+{% endfor %}
+------
+
+This would only access the files with the front matter variables declared
+a pdf would be excluded
+
+------------------------------------------------------
+
+tutorial part 19: hosting on github
+
