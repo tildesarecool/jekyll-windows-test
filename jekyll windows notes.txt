@@ -678,5 +678,42 @@ a pdf would be excluded
 
 ------------------------------------------------------
 
-tutorial part 19: hosting on github
+tutorial part 19/19: hosting on github pages
+
+in config.yml file
+change the 
+"base url" variable
+if planning on using the default URL
+this is going to the name of the github repo
+otherwise can use  the purchased URL
+Maybe i have to add config.yml to .gitignore? since that will vary
+depending where hosted?
+Unless it's in repo on AWS too. 
+have to play with it i guess. 
+I assume i could just use the same repo name in all places than 
+the varialbe could be universal and wouldn't have to be ignored
+
+in the video he started with 
+git init
+then
+git checkout -b -gh-pages
+so all this is if I had gone through the prior 18 videos
+having not had a git repo the whole time
+and i want to make the directory a repo
+it would create the repo
+and a 
+git status
+would show a list of files already there
+along with notes that they had not been added to the repo
+and/or changes commited
+adding the files:
+git add . 
+then
+git commit -m "initial commit"
+next steps were just him pushing files back to git hub
+
+all i had to do was go to "settings" of the already made repo
+and enable git hub pages the select the "master" branch
+it showed up immediately at:
+https://tildesarecool.github.io/jekyll-windows-test/
 
