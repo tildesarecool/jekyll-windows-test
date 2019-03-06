@@ -576,3 +576,42 @@ currently on as red text
 
 tutorial part 17: data files
 
+like "mini databases"
+
+would be stored as json, yaml or csv
+
+start with folder like
+_data
+
+created a "people.yml" file under it
+
+in the yml file, created some dummy data. This YML file has to spaced exactly and 
+using spaces not tabs. Took a minute to get this right:
+
+   - name: "tildes"
+     occupation: "jekyll student"
+
+   - name: "Steve"
+     occupation: "Firefighter"
+
+   - name: "Rob"
+     occupation: "Programmer"
+
+over in home.html:
+
+{{ site.data.people }}
+
+can also loop this data:
+{% for person in site.data.people %}
+  {{ person.name }}, {{person.occupation}} <br>
+{% endfor %}
+
+this outputted:
+tildes, jekyll student 
+Steve, Firefighter 
+Rob, Programmer 
+
+------------------------------------------------------
+
+tutorial part 18: static files
+
